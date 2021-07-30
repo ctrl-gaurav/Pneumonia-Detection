@@ -45,6 +45,156 @@
 
 Pneumonia Detection Using Various Neural Networks Architecture and using Transfer Learning on VGG16 as Pretrained Model
 
+Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus (purulent material), causing cough with phlegm or pus, fever, chills, and difficulty breathing. A variety of organisms, including bacteria, viruses and fungi, can cause pneumonia.
+
+The project is about diagnosing pneumonia from XRay images of lungs of a person using self laid convolutional neural network and tranfer learning via inceptionV3 and VGG16. 
+
+
+## Using Various Neural Network Architecture
+
+### Model 1
+
+**Architecture :**
+<ul>
+  <li>ReLU Activation</li>
+  <li>adam optimzer</li>
+</ul>
+
+<br>
+
+<div class="row">
+  <div class="column">
+    <img src="readme/model_1_accuracy.png" alt="Model 1 Accuracy" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="readme/model_1_loss.png" alt="Model 1 Loss" style="width:100%">
+  </div>
+</div>
+
+### Model 2
+
+**New architecture with improving the previous architecture**
+<ul>
+  <li>ReLU Activation</li>
+  <li>SGD optimzer</li>
+  <li>Dropout + Batch Normalization</li>
+</ul>
+
+<br>
+
+<div class="row">
+  <div class="column">
+    <img src="readme/model_2_accuracy.png" alt="Model 2 Accuracy" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="readme/model_2_loss.png" alt="Model 2 Loss" style="width:100%">
+  </div>
+</div>
+
+### Model 3
+
+**3 Hidden Layers**
+<ul>
+  <li>ReLU Activation</li>
+  <li>RMSprop optimzer</li>
+  <li>Dropout</li>
+  <li>Model Architecture: 784-512-364-128-10</li>
+</ul> 
+
+<br>
+
+<div class="row">
+  <div class="column">
+    <img src="readme/model_3_accuracy.png" alt="Model 3 Accuracy" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="readme/model_3_loss.png" alt="Model 3 Loss" style="width:100%">
+  </div>
+</div>
+
+
+<h1>Conclusion</h1>
+<html>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+</style>
+<body>
+    <br>
+    <b>Here are the results of our three models</b> 
+<table border=1>
+  <tr>
+    <th>Model</th>
+    <th>Architecture</th>
+    <th>Training Accuracy</th>
+    <th>Test Accuracy</th>
+  </tr>
+  <tr>
+    <td>Model 1</td>
+    <td>2:1 Arcitecture without using Batch Normalization and Dropout</td>
+    <td>95.48%</td>
+    <td>91.67%</td>
+  </tr>
+  <tr>
+    <td>Model 2</td>
+    <td>4:2 Achitecture using Batch Normalization and Dropout</td>
+    <td>93.58%</td>
+    <td>87.98%</td>
+  </tr>
+  <tr>
+    <td>Model 3</td>
+    <td>3:1 Convolutional layer</td>
+    <td>94.74%</td>
+    <td>91.67%</td>
+  </tr>
+</table>
+</body>
+</html>
+
+## Transfer Learning VGG 16 and VGG 19 using Keras
+
+<div class="row">
+  <div class="column">
+    <img src="readme/VGG16_accuracy.png" alt="VGG16 Accuracy" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="readme/VGG16_loss.png" alt="VGG16 Loss" style="width:100%">
+  </div>
+</div>
+
+<h1>Conclusion</h1>
+<html>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+</style>
+<body>
+    <br>
+    <b>Here are the results of Transfer Learning</b> 
+<table border=1>
+  <tr>
+    <th>Model</th>
+    <th>Architecture</th>
+    <th>Training Accuracy</th>
+    <th>Test Accuracy</th>
+  </tr>
+  <tr>
+    <td>VGG 16</td>
+    <td>Epoch = 2 Batch size = 10</td>
+    <td>95.24%</td>
+    <td>90.87%</td>
+  </tr>
+</table>
+</body>
+</html>
+
 
 ## Built With
 
@@ -157,4 +307,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
-[screenshot1]: readme/nn.png
+[screenshot1]: readme/model_1_accuracy.png
+[screenshot2]: readme/model_1_loss.png
+[screenshot3]: readme/model_2_accuracy.png
+[screenshot4]: readme/model_2_loss.png
+[screenshot5]: readme/model_3_accuracy.png
+[screenshot6]: readme/model_3_loss.png
