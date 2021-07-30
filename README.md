@@ -115,16 +115,10 @@ The project is about diagnosing pneumonia from XRay images of lungs of a person 
 
 <h1>Conclusion</h1>
 <html>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-</style>
 <body>
     <br>
-    <b>Here are the results of our three models</b> 
+    <b>Here are the results of our three models :</b>
+    <br> 
 <table border=1>
   <tr>
     <th>Model</th>
@@ -158,26 +152,19 @@ table {
 
 <div class="row">
   <div class="column">
-    <img src="readme/VGG16_accuracy.png" alt="VGG16 Accuracy" style="width:100%">
+    <img src="readme/VGG16_accuracy.png" alt="VGG16 Accuracy" style="width:50%">
   </div>
   <div class="column">
-    <img src="readme/VGG16_loss.png" alt="VGG16 Loss" style="width:100%">
+    <img src="readme/VGG16_loss.png" alt="VGG16 Loss" style="width:50%">
   </div>
 </div>
 
 <h1>Conclusion</h1>
 <html>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-</style>
 <body>
     <br>
-    <b>Here are the results of Transfer Learning</b> 
+    <b>Here are the results of Transfer Learning :</b> 
+    <br>
 <table border=1>
   <tr>
     <th>Model</th>
